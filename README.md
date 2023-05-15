@@ -135,3 +135,163 @@ $ git branch -d test
 Deleted branch test (was bc24106).
 
 ## Exercise 2
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   home.html
+
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git stash
+Saved working directory and index state WIP on main: e76b74f removed homepage to restart
+
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git stash
+Saved working directory and index state WIP on main: e76b74f removed homepage to restart
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git stash
+Saved working directory and index state WIP on main: e76b74f removed homepage to restart
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git stash list
+stash@{0}: WIP on main: e76b74f removed homepage to restart
+stash@{1}: WIP on main: e76b74f removed homepage to restart
+stash@{2}: WIP on main: e76b74f removed homepage to restart
+
+
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git stash pop stash@{1}
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{1} (bc89815277ca61265375d2ce4776c62aa64ceb92)
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git stash list
+stash@{0}: WIP on main: e76b74f removed homepage to restart
+stash@{1}: WIP on main: e76b74f removed homepage to restart
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git stash pop^C
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git stash pop stash@{1}
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Dropped stash@{1} (8fb07f4da3e74722c9a602c685ef5a4bb86d9d03)
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git commit -m "adding home and about page"
+[main b04b81c] adding home and about page
+ 2 files changed, 26 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 429 bytes | 214.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Umutoni123/bundle-1-exercise-2.git
+   e76b74f..b04b81c  main -> main
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git stash list
+stash@{0}: WIP on main: e76b74f removed homepage to restart
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git stash pop stash@{0}
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped stash@{0} (845a2328c44f10b0c24a2369a401baee108fae12)
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git reset --hard
+HEAD is now at b04b81c adding home and about page
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$
