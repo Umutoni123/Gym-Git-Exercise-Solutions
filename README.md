@@ -295,3 +295,38 @@ nothing to commit, working tree clean
 
 MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
 $
+# Bundle 2
+## Exercise 1
+
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/bundle-2)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/bundle-2)
+$ git commit -m "adding the service page and do some changes in It"
+[ft/bundle-2 182e943] adding the service page and do some changes in It
+ 1 file changed, 13 insertions(+)
+ create mode 100644 service.html
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/bundle-2)
+$ git push --set-upstream origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 475 bytes | 237.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/Umutoni123/bundle-1-exercise-2/pull/new/ft/bundle-2
+remote:
+To https://github.com/Umutoni123/bundle-1-exercise-2.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/bundle-2)
+$
