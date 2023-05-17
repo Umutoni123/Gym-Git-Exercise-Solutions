@@ -221,9 +221,6 @@ stash@{0}: WIP on main: e76b74f removed homepage to restart
 stash@{1}: WIP on main: e76b74f removed homepage to restart
 
 MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
-$ git stash pop^C
-
-MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
 $ git stash pop stash@{1}
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -295,7 +292,8 @@ nothing to commit, working tree clean
 
 MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
 $
-# Bundle 2
+
+# # Bundle 2
 ## Exercise 1
 
 
@@ -330,3 +328,121 @@ branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 
 MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/bundle-2)
 $
+
+## Bundle 2 Exercise 2
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/bundle-2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/service-redesign)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/service-redesign)
+$ git commit -m "adding the service page and do some changes"
+[ft/service-redesign 8cca6ae] adding the service page and do some changes
+ 1 file changed, 13 insertions(+)
+ create mode 100644 service.html
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/service-redesign)
+$ git push -u origin ft/service-redesign
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 268 bytes | 89.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/Umutoni123/bundle-1-exercise-2/pull/new/ft/service-redesign
+remote:
+To https://github.com/Umutoni123/bundle-1-exercise-2.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git commit -m "make some changes"
+[main 2606c78] make some changes
+ 1 file changed, 19 insertions(+)
+ create mode 100644 service.html
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 497 bytes | 497.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Umutoni123/bundle-1-exercise-2.git
+   b04b81c..2606c78  main -> main
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/service-redesign)
+$ git diff
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/service-redesign)
+$ git diff main ft/service-redesign
+diff --git a/service.html b/service.html
+index 034a007..2085e49 100644
+--- a/service.html
++++ b/service.html
+@@ -4,16 +4,10 @@
+         <title>My web page</title>
+     </head>
+     <body>
+-        <h1>Hello, world! I am making some changes</h1>
+-        <h2>Hello, world!</h2>
+-        <h3>Hello, world!</h3>
+-        <h4>Hello, world!</h4>
+-        <h5>Hello, world!</h5>
+-        
++        <h1>Hello, world!</h1>
+         <p>This is my first web page.</p>
+         <p>It contains a
+              <strong>main heading</strong> and <em> paragraph </em>.
+         </p>
+-        
+     </body>
+ </html>
+\ No newline at end of file
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/service-redesign)
+$ git merge main ft/service-redesign
+Auto-merging service.html
+CONFLICT (add/add): Merge conflict in service.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/service-redesign|MERGING)
+$ git commit -m "merging and solving the conflicts"
+[ft/service-redesign 36975db] merging and solving the conflicts
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/service-redesign)
+$ git push -u origin ft/service-redesign
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 225 bytes | 225.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Umutoni123/bundle-1-exercise-2.git
+   8cca6ae..36975db  ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
