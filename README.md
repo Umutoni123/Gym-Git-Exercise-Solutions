@@ -446,3 +446,234 @@ Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/Umutoni123/bundle-1-exercise-2.git
    8cca6ae..36975db  ft/service-redesign -> ft/service-redesign
 branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+# Bundle 3 
+## Exercise 1
+
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/service-redesign)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/team-page)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/team-page)
+$ git commit -m "did some changes on team page"
+[ft/team-page d8326e1] did some changes on team page
+ 1 file changed, 13 insertions(+)
+ create mode 100644 team.html
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/team-page)
+$ git push -u origin ft/team-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 245 bytes | 81.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/Umutoni123/bundle-1-exercise-2/pull/new/ft/team-page
+remote:
+To https://github.com/Umutoni123/bundle-1-exercise-2.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/contact-page|REVERTING)
+$ git log
+commit b04b81cc769fa38404eb73d789a1424adcab4246 (HEAD -> ft/contact-page, main)
+Author: noella <noellaumutoni5@gmail.com>
+Date:   Mon May 15 11:51:40 2023 +0200
+
+    adding home and about page
+
+commit e76b74ffb4978a2152efb6ac31732a0fb1f384e0
+Author: noella <noellaumutoni5@gmail.com>
+
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/contact-page|REVERTING)
+$ git cherry-pick  b04b81cc769fa38404eb73d789a1424adcab4246
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch ft/contact-page
+You are currently cherry-picking commit b04b81c.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/contact-page|CHERRY-PICKING)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/contact-page|CHERRY-PICKING)
+$ git commit -m "adding a contact page"
+[ft/contact-page fd7d788] adding a contact page
+ Date: Mon May 15 11:51:40 2023 +0200
+ 2 files changed, 24 insertions(+)
+ create mode 100644 contact.html
+ create mode 100644 team.html
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/contact-page|REVERTING)
+$ git push -u origin ft/contact-page
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 547 bytes | 136.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+remote: 
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/Umutoni123/bundle-1-exercise-2/pull/new/ft/contact-page
+remote:
+To https://github.com/Umutoni123/bundle-1-exercise-2.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/contact-page|REVERTING)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/faq-page|REVERTING)
+$ git add .
+
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/faq-page|REVERTING)
+$ git commit -m "added faq page"
+[ft/faq-page 446aac6] added faq page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 faq.html
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/faq-page|REVERTING)
+$ git push -u origin ft/faq-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 225 bytes | 112.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/Umutoni123/bundle-1-exercise-2/pull/new/ft/faq-page
+remote:
+To https://github.com/Umutoni123/bundle-1-exercise-2.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/faq-page|REVERTING)
+$ git revert b04b81cc769fa38404eb73d789a1424adcab4246
+hint: Waiting for your editor to close the file... Vim: Error reading input, exiting...
+Vim: Finished.
+error: There was a problem with the editor 'vi'.
+Please supply the message using either -m or -F option.
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/faq-page|REVERTING)
+$ git push
+Everything up-to-date
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/faq-page|REVERTING)
+$ git push -u origin ft/faq-page
+Everything up-to-date
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+##  Exercise 2
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/faq-page|REVERTING)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/home-page-redesign|REVERTING)
+$ git checkout main
+Switched to branch 'main'
+D       about.html
+D       home.html
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
+$ git commit -m "added a new branch in ft/faq-page branch"
+[main 4dfce58] added a new branch in ft/faq-page branch
+ 2 files changed, 26 deletions(-)
+ delete mode 100644 about.html
+ delete mode 100644 home.html
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
+$ git push
+To https://github.com/Umutoni123/bundle-1-exercise-2.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Umutoni123/bundle-1-exercise-2.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/home-page-redesign|REVERTING)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/home-page-redesign|REVERTING)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/home-page-redesign|REVERTING)
+$ git commit -m "workinf on git rebase and do some changes on home page"
+[ft/home-page-redesign 3eca16c] workinf on git rebase and do some changes on home page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 home.html
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/home-page-redesign|REVERTING)
+$ git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (10/10), 1.05 KiB | 134.00 KiB/s, done.
+Total 10 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/Umutoni123/bundle-1-exercise-2/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/Umutoni123/bundle-1-exercise-2.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+
+
