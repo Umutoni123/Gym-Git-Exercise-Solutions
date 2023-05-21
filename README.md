@@ -630,18 +630,6 @@ $ git commit -m "added a new branch in ft/faq-page branch"
  delete mode 100644 home.html
 
 MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
-$ git push
-To https://github.com/Umutoni123/bundle-1-exercise-2.git
- ! [rejected]        main -> main (non-fast-forward)
-error: failed to push some refs to 'https://github.com/Umutoni123/bundle-1-exercise-2.git'
-hint: Updates were rejected because the tip of your current branch is behind
-hint: its remote counterpart. Integrate the remote changes (e.g.
-hint: 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-
-
-
-MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
 $ git checkout ft/home-page-redesign
 Switched to branch 'ft/home-page-redesign'
 
@@ -675,5 +663,318 @@ To https://github.com/Umutoni123/bundle-1-exercise-2.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
 branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 
+# Bundle 4
+ ## Exercise 1
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/home-page-redesign|REVERTING)
+$ git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.  
+  (use "git pull" to merge the remote branch into yours)
 
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
+$ git remote add git-copy  https://github.com/Umutoni123/git-exercises.git
+
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
+$ git remote
+git-copy
+origin
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
+$ git commit -m "add headers in home page"
+[main 43baf4c] add headers in home page
+ 1 file changed, 16 insertions(+)
+ create mode 100644 home.html
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
+$ git push origin main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 766 bytes | 766.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Umutoni123/bundle-1-exercise-2.git
+   2606c78..8d16603  main -> main
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
+$ git push git-copy main
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (16/16), 1.88 KiB | 192.00 KiB/s, done.
+Total 16 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/Umutoni123/git-exercises.git
+ * [new branch]      main -> main
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
+$ git commit -m "add some changes"
+[main f8e3e74] add some changes 
+ 1 file changed, 2 insertions(+)
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 340 bytes | 340.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0        
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Umutoni123/bundle-1-exercise-2.git
+   8d16603..f8e3e74  main -> main
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
+$ git push git-copy main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 340 bytes | 340.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Umutoni123/git-exercises.git
+   8d16603..f8e3e74  main -> main
+ ## Exercise 2
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/footer|REVERTING)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/footer|REVERTING)
+$ git commit -m "added the ft/footer branch and created the footer page"
+[ft/footer 324f59a] added the ft/footer branch and created the footer page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/footer|REVERTING)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/footer|REVERTING)
+$ git commit -m "added some changes on footer page"
+[ft/footer e9fa2a6] added some changes on footer page
+ 1 file changed, 3 insertions(+)
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/footer|REVERTING)
+$ git push origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 843 bytes | 421.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+remote: 
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Umutoni123/bundle-1-exercise-2/pull/new/ft/footer
+remote:
+To https://github.com/Umutoni123/bundle-1-exercise-2.git
+ * [new branch]      ft/footer -> ft/footer
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/footer|REVERTING)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/squashing|REVERTING)
+$ git merge --squash ft/footer
+Updating f8e3e74..e9fa2a6
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+ create mode 100644 footer.html
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/squashing|REVERTING)
+$ git commit -m "footer changes squashing"
+[ft/squashing bef9549] footer changes squashing
+ 1 file changed, 15 insertions(+)
+ create mode 100644 footer.html
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/squashing|REVERTING)
+$ git push origin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 518 bytes | 518.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/Umutoni123/bundle-1-exercise-2/pull/new/ft/squashing
+remote:
+To https://github.com/Umutoni123/bundle-1-exercise-2.git
+ * [new branch]      ft/squashing -> ft/squashing
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/squashing|REVERTING)
+$
+
+# Exercise 5
+## Exercise 1
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (ft/squashing|REVERTING)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
+$ git commit -m "renamed home to index"
+[main 02d601e] renamed home to index
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename home.html => index.html (100%)
+
+MiaBen@Mia MINGW64 /d/bundle1 exercise 2 (main|REVERTING)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 271 bytes | 271.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Umutoni123/bundle-1-exercise-2.git
+   f8e3e74..02d601e  main -> main
+
+## Exercise 2
+
+
+MiaBen@Mia MINGW64 /d/git-cafe-exercise (main)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/git-cafe-exercise (main)
+$ git commit -m "added some changes"
+[main ecc1930] added some changes
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+MiaBen@Mia MINGW64 /d/git-cafe-exercise (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 313 bytes | 156.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Umutoni123/git-cafe-exercise.git
+   d1d3f9c..ecc1930  main -> main
+
+# Bundle 6
+## Exercise 1
+
+MiaBen@Mia MINGW64 /d/git-cafe-exercise (main)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/git-cafe-exercise (main)
+$ git commit -m "added some changes"
+[main ecc1930] added some changes
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+MiaBen@Mia MINGW64 /d/git-cafe-exercise (main)
+$ git push
+
+MiaBen@Mia MINGW64 /d/git-cafe-exercise (main)
+$ git checkout -b ft/menu
+Switched to a new branch 'ft/menu'
+
+MiaBen@Mia MINGW64 /d/git-cafe-exercise (ft/menu)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/git-cafe-exercise (ft/menu)
+$ git commit -m "added menu page"
+[ft/menu 7d950a6] added menu page
+ 1 file changed, 17 insertions(+)
+ create mode 100644 menu.html    
+
+MiaBen@Mia MINGW64 /d/git-cafe-exercise (ft/menu)
+$ git push --set-upstream origin ft/menu
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 487 bytes | 243.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/menu' on GitHub by visiting:
+remote:      https://github.com/Umutoni123/git-cafe-exercise/pull/new/ft/menu
+remote:
+To https://github.com/Umutoni123/git-cafe-exercise.git
+ * [new branch]      ft/menu -> ft/menu
+branch 'ft/menu' set up to track 'origin/ft/menu'.
+
+MiaBen@Mia MINGW64 /d/git-cafe-exercise (ft/menu)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+ ## Exercise 2
+
+MiaBen@Mia MINGW64 /d/git-cafe-exercise (main)
+$ git checkout -b ft/bug 
+Switched to a new branch 'ft/bug'
+
+MiaBen@Mia MINGW64 /d/git-cafe-exercise (ft/bug)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/git-cafe-exercise (ft/bug)
+$ git commit -m "renamed the index-4 to Contact"
+[ft/bug 531c69e] renamed the index-4 to Contact
+ 1 file changed, 203 insertions(+), 203 deletions(-)
+ rename index-4.html => Contact.html (97%)
+
+MiaBen@Mia MINGW64 /d/git-cafe-exercise (ft/bug)
+$ git push origin ft/bug
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.49 KiB | 1.25 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/bug' on GitHub by visiting:
+remote:      https://github.com/Umutoni123/git-cafe-exercise/pull/new/ft/bug
+remote:
+To https://github.com/Umutoni123/git-cafe-exercise.git
+ * [new branch]      ft/bug -> ft/bug
+
+ ## Exercise 3
+
+MiaBen@Mia MINGW64 /d/git-cafe-exercise (ft/bug)
+$ git add .
+
+MiaBen@Mia MINGW64 /d/git-cafe-exercise (ft/bug)
+$ git commit -m "changed the phone number"
+[ft/bug 9523dfe] changed the phone number
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ 
+MiaBen@Mia MINGW64 /d/git-cafe-exercise (ft/bug)
+$  git push --set-upstream origin ft/bug
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 297 bytes | 148.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Umutoni123/git-cafe-exercise.git
+   531c69e..9523dfe  ft/bug -> ft/bug
+branch 'ft/bug' set up to track 'origin/ft/bug'.
 
